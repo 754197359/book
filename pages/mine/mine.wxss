@@ -1,0 +1,220 @@
+.sn{
+  width: 100%;
+  height: 80px;
+  text-align:center;
+  line-height: 155rpx; 
+  color: white;
+  /* font-weight:bold; */
+  background:#F0893D;
+}
+
+.display{
+  display: inline-block;
+  vertical-align: middle;
+  
+}
+
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: middle;
+  /* border: 1px solid red; */
+}
+
+page{
+  background-color: #fff;
+}
+
+.title{
+  vertical-align: middle; 
+  margin-left: 20rpx;
+  /* border: 1px solid red; */
+}
+
+.quit{
+  margin-top: 30rpx;
+}
+
+.location{
+  position: absolute;
+  padding: 30rpx 2%;
+  margin: 0 4%;
+  width: 88%;
+  background-color: #fff;
+  top: 30rpx;
+  border-radius: 10rpx;
+  height: 101px;
+  box-shadow: 10rpx 20rpx 50rpx 10rpx #E0E0E0;
+}
+
+.shade{
+  height: 140rpx;
+  background-color: #3478F7;
+}
+
+.user-image{
+  width: 120rpx;
+  height: 120rpx;
+  vertical-align: middle;
+  border-radius: 60px;
+  margin-left: 4.3%;
+}
+
+.qrCode{
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: middle;
+  float: right;
+
+}
+
+.huiyuanicon{
+  height: 20px;
+  width: 20px;
+  /* border: red 1px solid; */
+  margin-left: 1%;
+}
+
+.tslabel {
+  height: 9.8%;
+  width: 25%;
+  color: #FFFFFF;
+  background: linear-gradient(to right, #EF7B3B, #F1963F);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.tslabel1 {
+  height: 9.8%;
+  width: 25%;
+  color: #FFFFFF;
+  background: linear-gradient(to right, #FF6A77, #FF97A3);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.tslabel2 {
+  height: 9.8%;
+  width: 25%;
+  color: #FFFFFF;
+  background: linear-gradient(to right, #F7B500, #FBDA00);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.minebj{
+  float: right;
+  margin-right: 5.7%;
+  color: #EF783A;
+}
+
+.minephone{
+  color: #333333;
+  font-size: 16px;
+  font-weight: 500;
+
+}
+
+.minejf{
+  margin-top: 3%;
+  float: left;
+  font-size: 16px;
+  margin-left: 4.3%;
+}
+
+.minenum{
+  margin-top: 1%;
+  float: left;
+  color: #EF783A;
+  font-size: 22px;
+}
+
+.minefen{
+  margin-top: 3%;
+  float: left;
+  font-size: 16px;
+  margin-left: 1%;
+}
+
+.mineicon{
+  height: 20px;
+  width: 20px;
+  float: left;
+}
+
+.mineicon1{
+  height: 20px;
+  width: 20px;
+  float: right;
+}
+
+.minetwo0{
+  color: #EF783A ;
+  float: right;
+  margin-right: 5%;
+}
+
+.minetwo1{
+  color: #FF6A77 ;
+  float: right;
+  margin-right: 5%;
+}
+
+.minetwo2{
+  color: #F7B500 ;
+  float: right;
+  /* margin-right: 5%; */
+}
+
+.mineone1{
+  margin-top: 25%;
+  margin-left: 4.3%;
+  margin-right: 4.3%;
+  /* border: 1px solid red; */
+  height: 50px;
+  width: 91.4%;
+}
+
+.minetwo{
+  float: left;
+  margin-left: 2.5%;
+  color: #333333;
+  
+}
+
+.minedivider{
+  margin-left: 4.3%;
+  margin-right: 4.3%;
+}
+
+.mineone{
+  margin-top: 5%;
+  margin-left: 4.3%;
+  margin-right: 4.3%;
+  /* border: 1px solid red; */
+  height: 50px;
+  width: 91.4%;
+}
+
+.bd{
+  width: 50px;
+  height: 30px;
+  float: right;
+  /* border: solid  1px red; */
+}
+
+.bd1{
+  width: 50px;
+  height: 30px;
+  float: right;
+  /* border: solid  1px red; */
+}

@@ -1,0 +1,10 @@
+<!-- <view class="ns">读书分享详情</view> -->
+<view class="tab3zong">
+	<view class="tab3title">《{{other.bookName}}》</view>
+	<van-image round width="30px" height="30px" src="{{other.icon}}" class="tab3icon" />
+	<view class="tab3user">{{other.vipName}}</view>
+	<view class="tab3time"> I {{other.addTime}}</view>
+</view>
+<view class="hang">
+<view class="tab3content">{{other.notes}}</view>
+</view>

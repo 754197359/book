@@ -1,0 +1,82 @@
+<!-- <view class="ns">预约详情</view> -->
+
+<import src="/pages/template/loading/loading.wxml" />
+    <view hidden="{{loading}}">
+
+<view class="yyxq1" style="background: linear-gradient(to right, {{color}});">
+	<!-- <view class="name">姓名</view>
+	<view class="data">{{username}}</view>
+	<view class="name1">预约日期</view>
+	<view class="data1">{{xq.reserveDate}}</view>
+	<view class="name4">最新入场时间</view>
+	<view class="data4">{{xq.inTime}}</view>
+	<view class="name2">预约号</view>
+	<view class="data2">{{xq.reserveCode}}</view>
+	<view class="name3">手机号码</view>
+	<view class="data3">{{phone}}</view>
+	<view class="name5">最新离场时间</view>
+	<view class="data5">{{xq.outTime}}</view> -->
+	<view class="yyleft">
+		<view class="yyleft1">姓名</view>
+		<view class="yyleft1">{{username==null?"":username}}</view>
+		<view class="yyleft1">预约日期</view>
+		<view class="yyleft1">{{xq.reserveDate==null?"":xq.reserveDate}}</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==2 || xq.reserveStatus==1}}" >最新入场时间</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==2 || xq.reserveStatus==1 }}" >{{xq.inTime==null?"":xq.inTime}}</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==4 }}" >取消日期</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==4 }}" >{{xq.reserveCancelTime==null?"":xq.reserveCancelTime}}</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==3 }}" >核消日期</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==3 }}" >{{xq.verifyTime==null?"":xq.verifyTime}}</view>
+	</view>
+		<view class="yymiddle">
+		<view class="yyleft1">预约号</view>
+		<view class="yyleft1" >{{xq.reserveCode==null?"":xq.reserveCode}}</view>
+		<view class="yyleft1">手机号码</view>
+		<view class="yyleft1">{{xq.reservePhone==null?"":xq.reservePhone}}</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==2}}">最新离场时间</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==2}}">{{xq.outTime==null?"":xq.outTime}}</view>
+	</view>
+	<image src="../../images/yycg.png" class="icon" wx:if="{{xq.reserveStatus==0}}"></image>
+	<image src="../../images/yqx.png" class="icon" wx:if="{{xq.reserveStatus==4}}"></image>
+	<image src="../../images/yixiaohe.png" class="icon" wx:if="{{xq.reserveStatus==3}}"></image>
+
+		<image src="../../images/yilichang2.png" class="icon" wx:if="{{xq.reserveStatus==2}}"></image>
+			<image src="../../images/yiruchang2.png" class="icon" wx:if="{{xq.reserveStatus==1}}"></image>
+				<image src="../../images/yishuangyue2.png" class="icon" wx:if="{{xq.reserveStatus==5}}"></image>
+</view>
+<view class="yyxq2">
+	<view class="yyxqwelcome" wx:if="{{xq.reserveStatus==1}}">欢迎入场！</view>
+	<view class="yyxqwelcome" wx:if="{{xq.reserveStatus==0}}">请在预约日期当天凭二维码扫码入场。</view>
+	<view class="yyxqwelcome" wx:if="{{xq.reserveStatus==4}}">您已取消本次预约，二维码失效。</view>
+	<view class="yyxqwelcome" wx:if="{{xq.reserveStatus==2}}">欢迎下次再来！</view>
+	<view class="yyxqwelcome" wx:if="{{xq.reserveStatus==5}}">很遗憾您没有按时赴约，期待下次与您相见！</view>
+	<view class="yyxqwelcome" wx:if="{{xq.reserveStatus==3}}">您的预约信息后台已核销完成，二维码失效。</view>
+</view>
+<view class="yyxq3">
+<canvas class='canvas' style="width:275px; height:275px;"  canvas-id='canvas' bindlongtap='save' hidden="{{show3}}"></canvas>
+<image src="../../images/erweima.png" class='canvas1'   hidden="{{show4}}"></image>
+<view  class="shixiaoewm" hidden="{{show4}}">二维码失效</view>
+</view>
+<!-- <view class="hint" wx:if="{{xq.reserveStatus==5}}">温馨提示</view>
+<view class="hint1" wx:if="{{xq.reserveStatus==5}}">您已累计爽约{{num}}次，爽约次数达到5次后，1周之内不可进行预约。</view> -->
+<!-- <button bindtap="goToPage2" style="height:6.6%; width: 91.2%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:60px; margin-left:4.4%; font-weight: normal;" class="button1" disabled="{{smsFlag}}" hidden="{{show8}}">查看刷码记录</button> -->
+<!-- <button bindtap="goToPage2" style="height:6.6%; width: 91.2%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B; margin-top:20px; margin-left:4.4%; font-weight: normal;" class="button1" disabled="{{smsFlag}}" hidden="{{show8}}">删除 </button> -->
+<!-- <button bindtap="goToPage2" style="height:6.6%; width: 91.2%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:60px; margin-left:4.4%; font-weight: normal;" class="button1" disabled="{{smsFlag}}" hidden="{{show2}}">查看刷码记录</button> -->
+<button bindtap="goToPage2" style="height:6.6%; width: 91.2%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B; margin-top:20px; margin-left:4.4%; font-weight: normal;  margin-bottom: 10px;" class="button1" disabled="{{smsFlag}}" hidden="{{show1}}">删除</button>
+<button bindtap="button1" style="height:6.6%; width: 91.2%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B; margin-top:20px; margin-left:4.4%; font-weight: normal;  margin-bottom: 10px; " class="button1" disabled="{{smsFlag}}" hidden="{{show}}">取消预约</button>
+<!-- <button bindtap="modalcnt" style="height:6.6%; width: 43.6%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B; margin-top:97px; margin-left:4.4%; font-weight: normal;float:left;" class="button1" disabled="{{smsFlag}}" hidden="{{show8}}">取消预约</button>
+<button bindtap="actioncnt" style="height:6.6%; width: 43.6%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:95px; margin-right:4.4%; font-weight: normal;float:right;" class="button1" disabled="{{smsFlag}}" hidden="{{show8}}">添加提醒</button> -->
+
+<view class="tanchuk" hidden="{{hidden}}">
+	<view>将在该时间向你发送预约提醒</view>
+	<button bindtap="gettrue" style="height:6.6%; width: 43.6%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:95px; margin-right:4.4%; font-weight: normal;float:right;" class="button1" disabled="{{smsFlag}}">保存</button>
+		<picker mode="date" fields="month" value="{{date}}" start="2000-01-01" end="{{years}}-{{months}}-{{days}}" bindchange="getDateTime" class="yearMonth">
+			<view class="selectDate">
+					{{yearAndMonth}} ＞
+			</view>
+	</picker>
+</view>
+   </view>
+     <view hidden="{{!loading}}" style="height: 100%">
+      <template is="loading" />
+    </view>

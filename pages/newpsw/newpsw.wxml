@@ -1,0 +1,15 @@
+
+<view>
+	<van-cell-group>
+		<van-field value="{{ username }}"  clearable label="手机号"  placeholder="请输入手机号" input-align="right"  maxlength="11" bind:change="onChange"  />
+    <view class="mima">
+    <input placeholder="请输入验证码" maxlength="6" bindinput="setPassInput" class="psw"></input>
+    <button bindtap="sendCode" disabled="{{smsFlag}}" style="color:#EF783A;   background-color: white;  font-size: 15px;  float: left; margin-left: 98%;  margin-top:-10%;  font-weight: normal; width:35vw;height:30px">{{sendTime}}</button>
+    <view class="divLine1"></view>
+    </view>
+  </van-cell-group>
+</view>
+<view>
+        	<view bindtap="goToPage2" class="button1"
+        bindtap="nextpsw">下一步</view>
+</view>

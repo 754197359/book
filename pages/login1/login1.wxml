@@ -1,0 +1,80 @@
+<!-- <view class="sn">
+
+</view> -->
+<view class="back-container" style="opacity:{{opacity}}"></view>
+<view class="page-title">
+  登录/注册
+</view>
+<image bindtap='onBackTap' class='back' src='../../images/icon_left_arrow.png'></image>
+
+	<image src="../../images/ren.png"  class="renimage" mode='widthFix'></image>
+<view class="location">
+	<view class="zhanghao">
+		<image src="../../images/iphone-icon.png" class="icon2"></image>
+		<input placeholder="请输入手机号" maxlength="11" class="phone" bindinput="getPhone" ></input>
+		<view class="divLine"></view>
+	</view>
+
+	<!-- 手机登录验证码 -->
+		<view class="mima" hidden="{{show3}}">
+		<image src="../../images/yanzhengma.png" class="icon"></image>
+		　　　　 <input placeholder="请输入验证码" maxlength="6" bindinput="setPassInput" class="psw"></input>
+		<button bindtap="sendCode1" disabled="{{smsFlag1}}" style="color:#EF783A; width: 42%;  background-color: white;  font-size: 14px;  float: left; margin-left: 38%;  margin-top:-12%;  font-weight: normal;">{{sendTime1}}</button>
+		<!-- <view bindtap="sendCode1" disabled="{{smsFlag1}}" style="color:#EF783A; width: 50%;    font-size: 14px;  float: left; margin-left: 63%;  margin-top:-10%;  font-weight: normal;">{{sendTime}}</view> -->
+				<view class="divLine1"></view>
+		</view>
+
+	<view class="mima" hidden="{{show}}" hidden="{{show2}}">
+		<image src="../../images/mima.png" class="icon"></image>
+		　　　　 <input placeholder="请输入密码" maxlength="16" bindinput="getmima" password='{{passwordType}}' class="psw"></input>
+
+		<image src="/images/biyan.png"  catchtap="seeTap" wx:if="{{defaultType}}" class="icon1"></image>
+		<image src="/images/zhengyan.png" catchtap="seeTap" wx:else class="icon1"></image>
+		<view class="divLine1"></view>
+	</view>
+	<!--  验证码-->
+	<view class="mima" hidden="{{show1}}">
+		<image src="../../images/yanzhengma.png" class="icon"></image>
+		　<input placeholder="请输入验证码" maxlength="6" bindinput="setPassInput1" class="psw"></input>
+		<button bindtap="sendCode" disabled="{{smsFlag}}" style="color:#EF783A; width: 42%;  background-color: white;  font-size: 14px;  float: left; margin-left: 38%;  margin-top:-12%;  font-weight: normal;">{{sendTime}}</button>
+		<!-- <view bindtap="sendCode" disabled="{{smsFlag}}" style="color:#EF783A; width: 47%;    font-size: 14px;  float: left; margin-left: 65%;  margin-top:-10%;  font-weight: normal;">{{sendTime}}</view> -->
+		<view class="divLine1"></view>
+	</view>
+	<view>
+		<view bindtap="goToPage2"  class="button1" 
+		hidden="{{show7}}">登录</view>
+		<!-- yanzhengma -->
+				<view bindtap="goToPage3"  class="button1" 
+		hidden="{{show9}}">登录</view>
+						<view bindtap="nextpsw"  class="button1"
+
+		hidden="{{show8}}">下一步</view>
+				<!-- <button bindtap="nextpsw" style="height:6.6%; width: 82.9%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:130px" class="button1" disabled="{{smsFlag}}" hidden="{{show8}}">下一步</button> -->
+	</view>
+</view>
+<view class="switch-type">
+	<view class="btn {{currentSelectTripType == 'pinche' ? 'active' : ''}}" bindtap='selectedPinche' data-id='pinche'>登录</view>
+	<view class="btn {{currentSelectTripType == 'baoche' ? 'active' : ''}}" bindtap='selectedBaoche' data-id='baoche'>注册</view>
+</view>
+<view class="findpsw" hidden="{{show6}}" bindtap="goToPage1">忘记密码</view>
+<!-- <view class="otherlogins">
+        
+          <view class="otherlogin">其他登陆方式</view>
+           <view class="divLine2"></view>
+         <view class="divLine3"></view>
+</view> -->
+<view class="otherlogins" hidden="{{show6}}" >
+	<van-divider contentPosition="center" class="loginother" customStyle="color: #999999; border-color: #999999; font-size: 16px;">
+		其他登录方式
+	</van-divider>
+</view>
+<!-- 手机图标 -->
+<!-- <view class="iphoneicon" hidden="{{show6}}">
+	<button class='btn1' bindtap="goToPage1" style="height:5%; width: 5%;color: white;   background:#EF783A; border-radius: 550px;">
+		<image class='btnImg1' src='../../images/shouji.png'></image>
+	</button>
+</view> -->
+<image src="../../images/qitadenglu.png" class="qitadenglu" hidden="{{show6}}" ></image>
+
+<view class="speediness" bindtap='selectedPinche1' data-id='shouji' hidden="{{show5}}">快速登录</view>
+<view class="speediness" bindtap='selectedPinche2'  data-id='mima' hidden="{{show4}}">密码登录</view>

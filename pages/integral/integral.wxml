@@ -1,0 +1,20 @@
+
+
+<view class="registerBox">
+	<image class='registerback' src='../../images/qiandao.png'></image>
+	<view bindtap="registerFun" class="registerBtn" style="">{{regisState}}</view>
+</view>
+
+<view class="regiscontent">
+	<view bindtap="goToPage1" class="totalinter" style="">总积分(分)：<view class="num">{{storeTotal}}</view></view>
+	<view wx:if='{{regiFlag}}' bindtap="goToPage1" class="interdetail" style="">今日已签到过，明日再来吧！</view>
+</view>
+
+<view class="calencontent">
+    <calendar class="calendar" selected="{{selected}}" bindselect="bindselect" bindgetdate="bindgetdate"  />
+</view>
+<view class="titlecontent mrb20">
+    <view bindtap="goToPage1" class="title" style="">签到规则</view>
+	  <view bindtap="goToPage1" class="titlebox" style="">每天可签到1次；签到1次，可积5分。</view>
+</view>
+

@@ -1,0 +1,66 @@
+{
+  "pages":[
+    "pages/shouye/shouye",
+    "pages/shimingrenzheng1/shimingrenzheng1",
+    "pages/login0/login0",
+    "pages/fhorder/fhorder",
+    "pages/webview/webview",
+    "pages/fuwenben/fuwenben",
+    "pages/integral/integral",
+    "pages/appointment/appointment",
+    "pages/orderxq/orderxq",
+    "pages/message1/message1",
+    "pages/login1/login1",
+    "pages/sousuo/sousuo",
+    "pages/appointmentdetails/appointmentdetails",
+    "pages/loginManage/wxLogin",
+    "pages/message/message",
+    "pages/caogao/caogao",
+    "pages/fabu/fabu",
+    "pages/dushubijixq/dushubijixq",
+    "pages/fabu1/fabu1",
+    "pages/dushubiji/dushubiji",
+    "pages/autonym/autonym",
+    "pages/newpsw/newpsw",
+    "pages/newpsw1/newpsw1",
+    "pages/register/register",
+    "pages/loading/loading",
+    "pages/mineredact/mineredact",
+    "pages/order/order",
+    "pages/mine/mine",
+    "pages/dushuxq/dushuxq",
+    "pages/tushuxq/tushuxq",
+    "pages/xinwenxq/xinwenxq",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F0893D",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#EF783A",
+    "list": [
+        {
+            "pagePath": "pages/shouye/shouye",
+            "iconPath": "images/shouye1.png",
+            "selectedIconPath": "images/shouye2.png",
+            "text": "首页"
+        },
+        {
+            "pagePath": "pages/order/order",
+            "iconPath": "images/yuyue1.png",
+            "selectedIconPath": "images/yuyue2.png",
+            "text": "预约"
+        },
+        {
+            "pagePath": "pages/mine/mine",
+            "iconPath": "images/wode1.png",
+            "selectedIconPath": "images/wode2.png",
+            "text": "我的"
+        }
+    ]
+},
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

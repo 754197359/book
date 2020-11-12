@@ -1,0 +1,11 @@
+<view style="padding:20rpx 40rpx;">
+	<view style="padding-bottom: 20rpx;">
+		<view class="title">{{fuwenben.title}}</view>
+		<image src="{{fuwenben.image}}" class='top-img'></image>
+	</view>
+
+	<view class="hang">
+  	<rich-text nodes="{{fuwenben.content}}"></rich-text>
+	</view>
+
+</view>

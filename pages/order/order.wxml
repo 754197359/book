@@ -1,0 +1,105 @@
+<van-tabs active="{{ active }}" bind:change="onChange" color="#EF783A">
+	<van-tab title="个人预约">
+
+		<view class="ordertwo">
+			<view class="ordertwoname">姓名</view>
+			<view class="ordertwoname1">{{name}}</view>
+			<view class="ordernotice">个人预约仅限于北一楼及北二楼开放区域，请凭预约码前往。</view>
+			<view class="ordernotice">场馆开放时间为周二至周日上午9:00-12:00 下午14:00-20:30。</view>
+		</view>
+		<view class="orderthree">
+			<view class="orderthreephone">手机号</view>
+			<van-field value="{{ reservePhone }}" placeholder="请输入手机号" border="{{ true }}" maxlength="11" bind:change="onChange5" clearable />
+			<view class="orderthreephone">预约日期</view>
+			<view class="orderthreeday">{{date}}</view>
+			<image src="../../images/rili.png" class="icon" bindtap="onDisplay"></image>
+			<van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" color="#EF783A" min-date="{{ minDate }}"
+  max-date="{{ maxDate }}" default-date="{{date}}"/>
+		</view>
+		<view class="orderone">
+			<view class="ordertitle">今日已预约{{reservedNum}}人，剩余可预约名额{{remainNum}}人。</view>
+		</view>
+		<view class="divLine"></view>
+		<view class="orderthreephone">读者须知</view>
+		<view class="notice">一、为了确保馆内保持良好秩序，衣履不整者、精神疾病患者、醉酒者、携带易燃易爆及危险品者、携带宠物者谢绝入内。</view>
+		<view class="notice">二、本馆不提供图书外借服务，仅限馆内阅读。</view>
+		<view class="notice">三、入馆后请保持言行举止文明，禁止大声喧哗，并将手机调至静音或震动状态，接打电话请至室外，不影响他人。</view>
+		<view class="notice">四、本馆采取全空间禁烟，严禁在馆内任何地方吸烟、用火，如需吸烟请移步室外。</view>
+		<view class="notice">五、请自觉维护馆内清洁卫生，禁止随地吐痰，乱扔废弃物，嚼吐口香糖，禁止在馆内外张贴或散发广告或其他宣传物品。</view>
+		<view class="notice">六、不得携带食品、饮料等入馆。</view>
+		<view class="notice">七、爱护馆内公共设施设备，请勿在桌椅、墙壁上涂抹刻画，请勿得随意挪动馆内展品。</view>
+		<view class="notice">八、爱惜馆内书籍，请勿随意在书上乱涂乱画，撕毁页面。阅读完的书籍请自觉放回原处。</view>
+		<view class="notice">九、出入通道如遇监测仪器鸣响，请主动配合本馆工作人员。</view>
+		<view class="notice">十、私人物品请妥善保管，如有遗失，责任自负。</view>
+		<view class="notice">十一、对本馆有任何意见和建议可通过意见簿反馈。</view>
+		<view class="notice">十二、请自觉遵守本馆以上规章制度，如有违反者，将视情节轻重予以处罚。</view>
+		<button bindtap="goToPage2" style="height:6.6%; width: 82.9%;color: #FFFFFF; background: linear-gradient(to right,{{color}}) ; border-radius: 30px; margin-bottom:4%; margin-top:6%" class="button1" disabled="{{smsFlag}}">立即预约</button>
+	</van-tab>
+	<!-- wx:if="{{isPartVip==0 ? 'disabled':''}}" -->
+	<!-- disabled="{{show3}}" -->
+	<van-tab title="分会预约" disabled="{{show3}}" >
+
+		<view class="ordertwo">
+			<view class="ordertwoname">姓名</view>
+			<view class="ordertwoname1">{{name}}</view>
+			<view class="ordernotice">场馆开放时间为周二至周日上午9:00-12:00 下午14:00-20:30。</view>
+		</view>
+		<!--  -->
+		<view class="orderthree1">
+			<view class="orderthreephone">手机号</view>
+			<van-field value="{{ reservePhone }}" placeholder="请输入手机号" border="{{ true }}" maxlength="11" bind:change="onChange5" clearable />
+			<view class="orderthreephone">分会名称</view>
+			<van-field value="{{ value }}" placeholder="请输入分会名称（50字以内）" border="{{ true }}" maxlength="50" bind:change="onChange2" clearable />
+
+			<view class="dataorder">
+				<view class="orderthreephone">预约日期</view>
+				<view class="orderthreeday">{{date}}</view>
+				<image src="../../images/rili.png" class="icon" bindtap="onDisplay" ></image>
+				<van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm1"  color="#EF783A"   min-date="{{ minDate }}"
+  max-date="{{ maxDate }}" default-date="{{date}}" />
+			</view>
+			<view class="divLine1"></view>
+
+			<view class="dataorder">
+				<view class="orderthreephone">预约时段</view>
+				<!-- <view wx:if="{{venue==0}}" class="orderthreeday1">请选择预约时段</view> -->
+				<view  class="orderthreeday">{{venue1}}</view>
+
+				<image src="../../images/jiantou.png" class="icon" bindtap="getshow2"></image>
+				<van-action-sheet show="{{ show2 }}" actions="{{ actions1 }}" bind:close="onClose2" bind:select="onSelect2" />
+			</view>
+			<view class="divLine1"></view>
+
+			<view class="dataorder">
+				<view class="orderthreephone">预约场馆</view>
+				<!-- <van-field value="{{ value }}" placeholder="请选择预约场馆" border="{{ true }}" maxlength="50" bind:change="onChange" clearable bind:close="onClose" bind:select="onSelect" show="{{ show1 }}"/> -->
+				<!-- <view show="{{ show1 }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect">xx
+			<van-action-sheet show="{{ show1 }}" actions="{{ actions }}" bind:close="onClose" bind:select="onSelect" />
+      </view> -->
+
+				<view wx:if="{{venue==0}}" class="orderthreeday1">请选择预约场馆</view>
+				<view wx:if="{{venue!=0}}" class="orderthreeday">{{venue}}</view>
+				<image src="../../images/jiantou.png" class="icon" bindtap="getshow1"></image>
+				<van-action-sheet show="{{ show1 }}" actions="{{ actions }}" bind:close="onClose1" bind:select="onSelect1" />
+			</view>
+			<!-- <van-dropdown-menu active-color="#ee0a24">
+				<van-dropdown-item value="{{ value1 }}" options="{{ option1 }}" />
+			</van-dropdown-menu> -->
+			<view class="divLine1"></view>
+			<view class="orderthreephone">参与人数</view>
+			<van-field value="{{ value }}" placeholder="请输入参会人数" border="{{ true }}" type="digit" bind:change="onChange1" clearable />
+			<view class="orderthreephone">活动内容</view>
+			<van-field value="{{ value }}" placeholder="请输入活动内容（200字以内）" border="{{ true }}" maxlength="200" bind:change="onChange9" clearable />
+		</view>
+		<view class="divLine"></view>
+		<view class="orderthreephone">预约须知</view>
+		<view class="notice">一、界首读书会各场地主要可用于读书分享会、社教活动、会议召开、演讲座谈、展览展示、访谈录制、来访参观等各项活动，场地面向各分会免费预约使用。</view>
+		<view class="notice">二、为避免活动发生冲突，各分会使用读书会场地，需提前1-3日通过预约系统进行预约，明确使用时间、参与人数、设施设备需求等，以便管理人员统筹安排。</view>
+		<view class="notice">三、临时取消场地预约需提前告知管理人员。</view>
+		<view class="notice">四、如遇活动之间发生冲突，活动单位双方之间可根据轻重缓急进行协调。</view>
+		<view class="notice">五、活动期间，请爱惜场地内的设备和物品，自觉保持清洁，禁止吸烟，禁止乱扔废弃物，保持室内清洁。</view>
+		<view class="notice">六、活动场地的设备，实行“谁使用谁负责”的原则，活动结束后，使用方要进行必要的检查，关闭各种电气设备的电源，包括照明灯具、投影仪、电视、电子屏、空调，并关好门窗。如发现设备故障或发现设备损坏的现象及时通知管理人员进行报修。</view>
+		<view class="notice">七、活动结束后，使用方需同管理人员做好交接。</view>
+		<button bindtap="goToPage3" style="height:6.6%; width: 82.9%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; margin-bottom:4%; margin-top:6%" class="button1" >立即预约</button>
+	</van-tab>
+</van-tabs>

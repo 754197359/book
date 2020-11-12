@@ -1,0 +1,5 @@
+<view class="header space-between">
+  <text class="iconfont"  bindtap='dataBefor'>
+    <text class='left color'> </text>
+  </text>
+</view>

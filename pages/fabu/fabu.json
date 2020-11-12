@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "编辑",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-field": "../../dist/field/index",
+    "van-action-sheet": "../../dist/action-sheet/index"
+  }
+}

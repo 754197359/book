@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "图书详情",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-button": "../../dist/button/index"
+  }
+}

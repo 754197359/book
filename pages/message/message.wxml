@@ -1,0 +1,93 @@
+<view class="ns">消息订阅</view>
+
+<view class="body_back">
+		<view class="weui_cells weui_cells_access">
+
+				<a class="weui_cell" href="javascript:;">
+						<view class="weui_cell_hd">
+						</view>
+						<view class="weui_cell_bd weui_cell_primary">
+								<p>预约消息通知</p>
+						</view>
+						<view class="weui_cell_ft">
+							<switch class="tui-fr" color="#42b24e" checked="{{isChecked3}}" bindchange="orderMess"/>
+						</view>
+				</a>
+				<a class="weui_cell" href="javascript:;">
+						<view class="weui_cell_hd">.</view>
+						<view class="weui_cell_bd weui_cell_primary">
+								<p>预约成功通知</p>
+						</view>
+						<view class="weui_cell_ft">
+								<switch class="tui-fr" color="#42b24e" checked="{{isChecked3}}" bindchange="changeSwitch3"/>
+						</view>
+				</a>
+						<a class="weui_cell" href="javascript:;">
+						<view class="weui_cell_hd">.
+						</view>
+						<view class="weui_cell_bd weui_cell_primary">
+								<p>预约状态变更通知</p>
+						</view>
+						<view class="weui_cell_ft">
+								<switch class="tui-fr" color="#42b24e" checked="{{isChecked3}}" bindchange="changeSwitch3"/>
+						</view>
+				</a>
+						<a class="weui_cell" href="javascript:;">
+						<view class="weui_cell_hd">.
+						</view>
+						<view class="weui_cell_bd weui_cell_primary">
+								<p>预约提醒通知</p>
+						</view>
+						<view class="weui_cell_ft">
+								<switch class="tui-fr" color="#42b24e" checked="{{isChecked3}}" bindchange="changeSwitch3"/>
+						</view>
+				</a>
+		</view>
+
+		<view class="weui_cells weui_cells_access">
+
+				<a class="weui_cell" href="javascript:;">
+						<view class="weui_cell_hd">
+						</view>
+						<view class="weui_cell_bd weui_cell_primary">
+								<p>实名认证通知</p>
+						</view>
+						<view class="weui_cell_ft">
+							<switch class="tui-fr" color="#42b24e" checked="{{isChecked3}}" bindchange="changeSwitch3"/>
+						</view>
+				</a>
+		</view>
+
+		<view class="weui_cells weui_cells_access">
+
+				<a class="weui_cell" href="javascript:;">
+						<view class="weui_cell_hd">
+						</view>
+						<view class="weui_cell_bd weui_cell_primary">
+								<p>笔记发布消息通知</p>
+						</view>
+						<view class="weui_cell_ft">
+							<switch class="tui-fr" color="#42b24e" checked="{{isChecked3}}" bindchange="changeSwitch3"/>
+						</view>
+				</a>
+				<a class="weui_cell" href="javascript:;">
+						<view class="weui_cell_hd">.</view>
+						<view class="weui_cell_bd weui_cell_primary">
+								<p>笔记发布通知</p>
+						</view>
+						<view class="weui_cell_ft">
+								<switch class="tui-fr" color="#42b24e" checked="{{isChecked3}}" bindchange="changeSwitch3"/>
+						</view>
+				</a>
+						<a class="weui_cell" href="javascript:;">
+						<view class="weui_cell_hd">.
+						</view>
+						<view class="weui_cell_bd weui_cell_primary">
+								<p>笔记审核结果通知</p>
+						</view>
+						<view class="weui_cell_ft">
+								<switch class="tui-fr" color="#42b24e" checked="{{isChecked3}}" bindchange="changeSwitch3"/>
+						</view>
+				</a>
+		</view>		
+</view>

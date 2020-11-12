@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "实名认证",
+  "navigationBarTextStyle": "white",
+  "navigationBarBackgroundColor": "#F0873D",
+  "enablePullDownRefresh":false,
+  "usingComponents": {
+    "van-uploader": "../../dist/uploader/index"
+  },
+
+    "navigationStyle": "custom"
+
+}

@@ -1,0 +1,24 @@
+/**app.wxss**/
+@import "weui.wxss";
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.ns {
+  width: 100%;
+  height: 143rpx;
+  text-align: center;
+  line-height: 190rpx;
+  color: white;
+  background: linear-gradient(to right, #F1963F, #EF7B3B);
+  font-size: 34rpx;
+}
+.mrb20{
+  margin-bottom: 20rpx!important;
+}

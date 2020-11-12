@@ -1,0 +1,34 @@
+
+<view class="message">
+	<view class="yourmessage">你有{{nessage}}条未读消息</view>
+	<image src="../../images/qingchu.png" class="icon" bindtap="cleanall"></image>
+	<view bindtap="cleanall">清除未读</view>
+</view>
+
+<view    wx:for="{{message}}"  wx:key="index" >
+	<!-- <image src="../../images/yytx.png" class="icon1"></image> 绿色蓝色黄色橙色粉色紫色蓝色-->
+	<view class="tongzhi" bindtap="cleanone" data-i="{{index}}" id="{{item.id}}" data-isyy="{{item.isReaded}}">
+	<van-icon name="../../images/yytx.png"    size="30px" class="icon1" wx:if="{{item.noticeType==2 && item.isReaded==1}}" />
+  	<van-icon name="../../images/yuyuchenggong.png"  size="30px" class="icon1" wx:if="{{item.noticeType==0 && item.isReaded==1}}" />
+    	<van-icon name="../../images/yyztbg.png"   size="30px" class="icon1" wx:if="{{item.noticeType==1 && item.isReaded==1 }}"/>
+				<van-icon name="../../images/smsh.png"   size="30px" class="icon1" wx:if="{{item.noticeType==3 && item.isReaded==1}}" />
+				
+				<van-icon name="../../images/yytx.png"  dot  size="30px" class="icon1" wx:if="{{item.noticeType==2 && item.isReaded==0 }}" />
+  	<van-icon name="../../images/yuyuchenggong.png" dot size="30px" class="icon1" wx:if="{{item.noticeType==0 && item.isReaded==0 }}" />
+    	<van-icon name="../../images/yyztbg.png"  dot size="30px" class="icon1" wx:if="{{item.noticeType==1 && item.isReaded==0 }}"/>
+				<van-icon name="../../images/smsh.png"  dot size="30px" class="icon1" wx:if="{{item.noticeType==3 && item.isReaded==0}}" />
+				
+				<van-icon name="../../images/bjfb.png"   size="30px" class="icon1" wx:if="{{item.noticeType==4 && item.isReaded==1}}" />
+				<van-icon name="../../images/bjfb.png" dot  size="30px" class="icon1" wx:if="{{item.noticeType==4 && item.isReaded==0}}" />
+				
+        <van-icon name="../../images/bjsh.png" size="30px" class="icon1" wx:if="{{item.noticeType==5 && item.isReaded==1}}" />
+				<van-icon name="../../images/jf.png"    size="30px" class="icon1" wx:if="{{item.noticeType==6 && item.isReaded==1}}"/>
+				<van-icon name="../../images/bjsh.png"  dot size="30px" class="icon1" wx:if="{{item.noticeType==5 && item.isReaded==0}}" />
+        <van-icon name="../../images/jf.png"  dot  size="30px" class="icon1" wx:if="{{item.noticeType==6 && item.isReaded==0 }}"/>
+	<view class="tz">{{item.title}}</view>
+	<view class="time">{{item.msgDate}}</view>
+	<view class="neirong">{{item.content}}</view>
+</view>
+<view class="divLine"></view>
+</view>
+<!-- <van-icon name="../../images/yytx.png" dot class="icon1"/> -->

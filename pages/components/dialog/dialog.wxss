@@ -1,0 +1,14 @@
+/* pages/calendar/calendar.wxss */
+
+.calendar-box {
+  position: relative;
+  top: -178rpx;
+  left: 0;
+  width: 686rpx;
+  height: 650rpx;
+  z-index: 999;
+  padding-top: 100rpx;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  opacity: 1;
+}

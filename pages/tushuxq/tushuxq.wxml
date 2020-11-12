@@ -1,0 +1,21 @@
+
+<view class="tsone">
+	<image src="{{other.coverImg}}" class="tsicon"></image>
+	<view class="tab1title">{{other.name}}</view>
+	<!-- <button  style="height:2%; width: 19%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px;  font-size: 14px;   font-weight: normal; margin-top:1%; margin-left:28%" >人文</button> -->
+
+	<view class="tslabel" wx:if="{{other.category==0}}">人文</view>
+	<view class="tslabel" wx:if="{{other.category==1}}">社科</view>
+	<view class="tslabel" wx:if="{{other.category==2}}">少儿</view>
+	<view class="tslabel" wx:if="{{other.category==3}}">名著</view>
+	<view class="tslabel" wx:if="{{other.category==4}}">军事</view>
+	<view class="tab1chuban">{{other.publishHouse}}</view>
+	<view class="tab1auther">作者：{{other.author}}</view>
+</view>
+<view class="tstwoauther">作者简介</view>
+<view class="content">{{other.authorSummary}}</view>
+<view class="tstwoauther">内容简介</view>
+<!-- <view class="content">{{other.bookSummary}}</view> -->
+<view class="content">
+<rich-text class="content"  nodes="{{other.bookSummary==null?'':other.bookSummary}}"></rich-text>
+</view>

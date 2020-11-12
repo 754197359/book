@@ -1,0 +1,47 @@
+
+<view class="yyxq1" style="background: linear-gradient(to right, {{color}});" >
+<!-- <view class="yyxq1" style="background: linear-gradient(to right, #F7B500, #FBDA00);" wx:if="{{xq.reserveStatus==4}}"> -->
+<!-- <view class="yyxq1" style="background: linear-gradient(to right, #AAAAAA, #E9E9E9);" wx:if="{{xq.reserveStatus==3}}"> -->
+	<!-- <view class="name">预约号</view>
+	<view class="data">{{xq.reserveCode}}</view>
+	<view class="name1">参会人数</view>
+	<view class="data1">{{xq.meetingNumber}}人</view>
+	<view class="name2">预约时间</view>
+	<view class="data2">{{xq.reserveDate}}</view>
+	<view class="name3" wx:if="{{xq.reserveStatus==4}}">取消时间</view>
+	<view class="data3" wx:if="{{xq.reserveStatus==4}}">{{xq.reserveCode}}</view>
+		<view class="name3" wx:if="{{xq.reserveStatus==3}}">核销时间</view>
+	<view class="data3" wx:if="{{xq.reserveStatus==3}}">{{xq.reserveCode}}</view> -->
+	<view class="yyleft">
+		<view class="yyleft1">预约号</view>
+		<view class="yyleft1">{{xq.reserveCode==null?"":xq.reserveCode}}</view>
+		<view class="yyleft1">参会人数</view>
+		<view class="yyleft1">{{xq.meetingNumber==null?"":xq.meetingNumber}}</view>
+	</view>
+		<view class="yymiddle">
+		<view class="yyleft1">预约时间</view>
+		<view class="yyleft1" >{{xq.reserveDate==null?"":xq.reserveDate}} {{xq.reserveHalf==0?"上午":"下午"}}</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==4}}">取消时间</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==4}}">{{xq.reserveCancelTime==null?"":xq.reserveCancelTime}}</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==3}}">核销时间</view>
+		<view class="yyleft1" wx:if="{{xq.reserveStatus==3}}">{{xq.verifyTime==null?"":xq.verifyTime}}</view>
+	</view>
+
+	<image src="../../images/yycg.png" class="icon" wx:if="{{xq.reserveStatus==0}}"></image>
+		<image src="../../images/yqx.png" class="icon" wx:if="{{xq.reserveStatus==4}}"></image>
+			<image src="../../images/yixiaohe.png" class="icon" wx:if="{{xq.reserveStatus==3}}"></image>
+<!-- </view> -->
+<!-- </view> -->
+</view>
+<!--  -->
+<view class="fenhmc">
+<view class="fhmc">分会名称</view>
+<view class="yycg">{{xq.meetingName==null?"":xq.meetingName}}</view>
+<view class="fhmc">预约场馆</view>
+<view class="yycg">{{xq.libraryName==null?"":xq.libraryName}}</view>
+<view class="fhmc">活动内容</view>
+<view class="yycg">{{xq.meetingContent==null?"":xq.meetingContent}}</view>
+</view>
+
+		<button bindtap="button1" style="height:6.6%; width: 91.4%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B; margin-bottom:4%; margin-top:10%;margin-left:4.3%;   font-weight: normal;" class="button1" disabled="{{smsFlag}}" hidden="{{show}}">取消预约</button>
+		<button bindtap="goToPage2" style="height:6.6%; width: 91.4%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B; margin-bottom:4%; margin-top:10%;margin-left:4.3%;   font-weight: normal;" class="button1" disabled="{{smsFlag}}" hidden="{{show1}}">删除</button>

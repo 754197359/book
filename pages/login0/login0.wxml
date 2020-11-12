@@ -1,0 +1,14 @@
+
+<image src="../../images/dushulogo.png" class="logo" mode="widthFix"></image>
+<view class="buttons">
+	<!-- <image src="../../images/dushulogo.png" class="logo"></image> -->
+	<!-- <button class='btn1' hidden="{{showFlag}}" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="bindGetUserInfo" style="height:6.6%; width: 82.9%;color: white;   background:linear-gradient(to right,#EF7B3B ,#F1963F); border-radius: 30px;">
+		<image class='btnImg1' src='../../images/weixin.png'></image>
+	 <view >微信授权登陆</view> -->
+		<!-- <button class="btn"  bindtap='bindGetUserInfo'>微信授权登陆</button> -->
+	<!-- </button> -->
+	<button class='btn1' bindtap="goToPage2" style="height:6.6%; width: 82.9%;color: #EF7B3B; background: #FFFFFF ; border-radius: 30px; border:1px solid #EF7B3B; ">
+		<image class='btnImg1' src='../../images/shouji.png'></image>
+		<view >手机快速/密码登录</view>
+	</button>
+</view>

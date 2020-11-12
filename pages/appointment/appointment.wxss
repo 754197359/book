@@ -1,0 +1,209 @@
+
+
+.icon{
+  height: 20px;
+  width: 20px;
+}
+
+.iphoneicon{
+  margin-top: 2.4%;
+  float: left;
+  margin-left: 4.4%;
+  /* border: red 1px solid; */
+  height: 40px;
+  width: 40px;
+  border-radius: 550px;
+  background: linear-gradient(to bottom, #0EE3A6, #06C36D);
+}
+
+.btnImg1 {
+  width: 20px;
+  height: 20px;
+  margin-left: 11px;
+  margin-top: 8px;
+}
+
+.title{
+  float: left;
+  margin-top: 2%;
+  font-size: 16px;
+  /* margin-left: 2.1%; */
+  width: 170px;
+  /* border: 1px solid red; */
+}
+
+.yiyuyue{
+  float: right;
+  margin-top: 2%;
+  font-size: 16px;
+  margin-left: 2.1%;
+  background: linear-gradient(to right, #06C36D,#0EE3A6);
+  border-radius: 550px 0px 0px 550px;
+  width: 19.3%;
+  height: 80.8%;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 155%;
+  /* border: 1px solid red; */
+}
+
+.data{
+  float: left;
+  border: solid 1px white;
+  margin-top: 2%;
+  margin-left: 3%;
+  color: #999999;
+}
+
+.divLine{
+  background: #E1E1E1;
+  height: 1px;
+  margin-left: 4.4%;
+  margin-right: 4.1%;
+} 
+
+.oneappointment{
+  height: 85px;
+  width: 100%;
+}
+
+.yiyuyue1{
+  float: right;
+  margin-top: 2%;
+  font-size: 16px;
+  margin-left: 2.1%;
+  background: linear-gradient(to right,#42D0FF, #74E9FF);
+  border-radius: 550px 0px 0px 550px;
+  width: 19.3%;
+  height: 80.8%;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 155%;
+}
+
+.iphoneicon1{
+  margin-top: 2.4%;
+  float: left;
+  margin-left: 4.4%;
+  /* border: red 1px solid; */
+  height: 40px;
+  width: 40px;
+  border-radius: 550px;
+  background: linear-gradient(to bottom, #42D0FF, #74E9FF);
+}
+
+.yiyuyue2{
+  float: right;
+  margin-top: 2%;
+  font-size: 16px;
+  margin-left: 2.1%;
+  background: linear-gradient(to right,#EF783A, #F8AD6A);
+  border-radius: 550px 0px 0px 550px;
+  width: 19.3%;
+  height: 80.8%;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 155%;
+}
+
+.iphoneicon2{
+  margin-top: 2.4%;
+  float: left;
+  margin-left: 4.4%;
+  /* border: red 1px solid; */
+  height: 40px;
+  width: 40px;
+  border-radius: 550px;
+  background: linear-gradient(to bottom, #EF783A, #F8AD6A);
+}
+
+.yiyuyue3{
+  float: right;
+  margin-top: 2%;
+  font-size: 16px;
+  margin-left: 2.1%;
+  background: linear-gradient(to right,#ABABAB, #F4F4F4);
+  border-radius: 550px 0px 0px 550px;
+  width: 19.3%;
+  height: 80.8%;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 155%;
+}
+
+.iphoneicon3{
+  margin-top: 2.4%;
+  float: left;
+  margin-left: 4.4%;
+  /* border: red 1px solid; */
+  height: 40px;
+  width: 40px;
+  border-radius: 550px;
+  background: linear-gradient(to bottom, #ABABAB, #F4F4F4);
+}
+
+.yiyuyue4{
+  float: right;
+  margin-top: 2%;
+  font-size: 16px;
+  margin-left: 2.1%;
+  background: linear-gradient(to right,#F7B500, #FCDB00);
+  border-radius: 550px 0px 0px 550px;
+  width: 19.3%;
+  height: 80.8%;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 155%;
+}
+
+.iphoneicon4{
+  margin-top: 2.4%;
+  float: left;
+  margin-left: 4.4%;
+  /* border: red 1px solid; */
+  height: 40px;
+  width: 40px;
+  border-radius: 550px;
+  background: linear-gradient(to bottom, #F7B500, #FCDB00);
+}
+
+.yiyuyue5{
+  float: right;
+  margin-top: 2%;
+  font-size: 16px;
+  margin-left: 2.1%;
+  background: linear-gradient(to right,#FF6976, #FFA0AC );
+  border-radius: 550px 0px 0px 550px;
+  width: 19.3%;
+  height: 80.8%;
+  text-align: center;
+  color: #FFFFFF;
+  line-height: 155%;
+}
+
+.iphoneicon5{
+  margin-top: 2.4%;
+  float: left;
+  margin-left: 4.4%;
+  /* border: red 1px solid; */
+  height: 40px;
+  width: 40px;
+  border-radius: 550px;
+  background: linear-gradient(to bottom, #FF6976, #FFA0AC );
+}
+
+.yiyuyue11{
+  width: 45px;
+  height: 45px;
+  float: left;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.border1{
+  height: 30px;
+  /* border: solid 1px green; */
+  width: 83%;
+  margin-left: 17%;
+  margin-top: 5%;
+}

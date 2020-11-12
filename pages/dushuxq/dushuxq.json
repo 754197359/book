@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "读书分享详情",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-image": "../../dist/image/index"
+  }
+}

@@ -1,0 +1,41 @@
+
+<view class="all">
+<view class="head">
+ <van-dropdown-menu class="title" active-color="#EF783A ">
+  <van-dropdown-item value="{{ value1 }}" options="{{ option1 }}"    bind:change="onSwitch1Change"/>
+</van-dropdown-menu>
+	<van-search value="{{ value }}" shape="round" placeholder="搜索" class="search"   bind:change="onChange"  bind:search="onSearch"  bind:focus="showHistory"  bind:blur="showHistory1" />
+  
+  <view class="quxiao" bindtap="fanhui">取消</view>
+  <!-- <view slot="action" bind:tap="onClick">取消</view> -->
+  <scroll-view wx:if="{{sousuo.length>0}}" class="search-data" scroll-y="true" hidden="{{show1}}">
+				<view wx:for="{{sousuo}}" wx:key="index" class="tankuang">
+ 
+          <image src="../../images/sousuo.png" class="sousuoicon"></image>
+          <view bindtap="getName" data-name="{{item.name}}" data-id="{{item.id}}" 
+          data-searchType="{{item.searchType}}" class="itemname">{{item.name}}</view>
+          <image src="../../images/jiantouzs.png" class="jiantouicon"></image>
+          <view class="divLine" ></view>
+        </view>
+
+	</scroll-view>
+</view>
+
+<view class="sssc" hidden="{{show}}">
+<view class="sousuolishi">搜索历史</view>
+<image src="../../images/shanchu.png" class="shanchu" bindtap="deletess"></image>
+</view>
+</view>
+
+<view class="lsjl" hidden="{{show}}">
+<view  class="someone" wx:for="{{list}}" wx:key="index" bindtap="getls" data-name="{{item.keyword}}">{{item.keyword}}</view>
+</view>
+<!-- <view class="search_history_lists" wx:if="{{showHistory}}">
+      <view class='title'>
+      历史搜索
+      </view>
+      <view wx:for="{{historyList}}" wx:key="item">
+        <view class="searchRecord">{{item}}</view>
+      </view>
+      <navigator wx:if="{{historyList.length!==0}}" class="clearHistory" bindtap="clearHistory" open-type="navigateBack" hover-class='none'>清除搜索历史</navigator>
+</view> -->

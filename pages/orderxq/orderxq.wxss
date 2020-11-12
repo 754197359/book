@@ -1,0 +1,183 @@
+
+
+.yyxq1 {
+  width: 91.5%;
+  height: 130px;
+  margin-top: 4%;
+  margin-left: 4.4%;
+  margin-right: 4.1%;
+  /* background: linear-gradient(to right, #07C570, #0EE1A1); */
+  border-radius: 10px;
+}
+
+.name {
+  color: #FFFFFF;
+  margin-left: 4.5%;
+  margin-top: 2.3%;
+  float: left;
+  /* border: 1px solid red; */
+  font-size: 12px;
+}
+
+.data {
+  color: #FFFFFF;
+  float: left;
+  margin-left: -10%;
+  margin-top: 10%;
+  font-size: 14px;
+  /* border: 1px solid red; */
+}
+
+.name1 {
+  color: #FFFFFF;
+  margin-left: -36%;
+  margin-top: 18.3%;
+  float: left;
+  /* border: 1px solid red; */
+  font-size: 12px;
+}
+
+.data1 {
+  color: #FFFFFF;
+  float: left;
+  margin-left: -36%;
+  margin-top: 26%;
+  font-size: 14px;
+  /* border: 1px solid red; */
+}
+
+.name2 {
+  color: #FFFFFF;
+  margin-left: 5.5%;
+  margin-top: 2.3%;
+  float: left;
+  /* border: 1px solid red; */
+  font-size: 12px;
+}
+
+.name4 {
+  color: #FFFFFF;
+  margin-left: -18.5%;
+  margin-top: 34.3%;
+  float: left;
+  /* border: 1px solid red; */
+  font-size: 12px;
+}
+
+.data4 {
+  color: #FFFFFF;
+  float: left;
+  margin-left: -19%;
+  margin-top: 42%;
+  font-size: 14px;
+  /* border: 1px solid red; */
+}
+
+.data2 {
+  color: #FFFFFF;
+  margin-left: -11.5%;
+  margin-top: 10.3%;
+  float: left;
+  font-size: 14px;
+  /* border: 1px solid red; */
+}
+
+.data2 {
+  color: #FFFFFF;
+  margin-left: -13%;
+  margin-top: 10%;
+  float: left;
+  font-size: 14px;
+  /* border: 1px solid red; */
+}
+
+.name3 {
+  color: #FFFFFF;
+  margin-left: -21%;
+  margin-top: 18%;
+  float: left;
+  font-size: 12px;
+}
+
+.data3 {
+  color: #FFFFFF;
+  margin-left: -21%;
+  margin-top: 26%;
+  float: left;
+  font-size: 14px;
+}
+
+.name5 {
+  color: #FFFFFF;
+  margin-left: -25.5%;
+  margin-top: 34%;
+  float: left;
+  font-size: 12px;
+}
+
+.data5 {
+  color: #FFFFFF;
+  margin-left: -25.5%;
+  margin-top: 42%;
+  float: left;
+  font-size: 14px;
+}
+
+.icon {
+  height: 128px;
+  width: 128px;
+  float: right;
+  margin-right: -2.5%;
+  margin-top: -35%;
+  /* border: red 1px solid; */
+}
+
+.fenhmc{
+  margin-left: 4.3%;
+  margin-top: 2.4%;
+}
+
+.fhmc{
+  color: #333333;
+  font-weight: 550;
+  margin-top: 3%;
+  font-family: PingFangSC-Light;
+}
+
+.yycg{
+  color: #333333;
+  font-family: PingFangSC-Light;
+  margin-top: 2%;
+  margin-right: 4.3%;
+  font-size: 14px;
+}
+
+.yyleft{
+  width: 41%;
+  float: left;
+
+  margin-left: 3%;
+  height: 120px;
+}
+
+.yymiddle{
+  width: 41%;
+  float: left;
+  height: 120px;
+  margin-left: 9%;
+
+}
+
+.yyleft1{
+  color: #FFFFFF;
+  font-size: 14px;
+  margin-top: 5%;
+}
+
+.icon {
+  height: 128px;
+  width: 128px;
+  float: right;
+  margin-right: -3%;
+  margin-top: -35%;
+}

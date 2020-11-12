@@ -1,0 +1,45 @@
+
+
+.tab3title{
+  font-size: 18px;
+  margin-left: 4.3%;
+  margin-top: 5%;
+  color: #333333;
+}
+
+.tab3icon{
+
+  margin-left: 4.3%;
+  margin-top: 3%;
+  float: left;
+  /* border: red 1px solid; */
+}
+
+.tab3user{
+  margin-left: 4.3%;
+  margin-top: 4%;
+  float: left;
+  /* border: red 1px solid; */
+}
+
+.tab3time{
+  margin-left: 2.3%;
+  margin-top: 4%;
+  float: left;
+  color: #999999;
+  /* border: red 1px solid; */
+  width: 65%;
+}
+
+.tab3content{
+  /* border: red 1px solid; */
+  margin-left: 4.2%;
+  margin-right: 4.2%;
+  font-size: 14px;
+  margin-top: 18%;
+  margin-bottom: 4.2%;
+}
+
+.hang{
+  width: 100%;
+}

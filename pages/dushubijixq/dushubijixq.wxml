@@ -1,0 +1,24 @@
+<!-- <view class="ns">读书笔记详情</view> -->
+<view class="shuming">书名</view>
+<view class="ydcd">{{bj.bookName}}</view>
+
+<view class="shuming">阅读程度</view>
+<view class="hezi">
+<view class="ydcd1" wx:if="{{bj.readProgress ==0}}">进行中</view>
+<view class="ydcd1" wx:if="{{bj.readProgress ==1}}">已完成</view>
+<!-- <image src="../../images/jiantou.png" class="jticon" bindtap="getshow1"></image> -->
+<van-action-sheet show="{{ show1 }}" actions="{{ actions }}" bind:close="onClose1" bind:select="onSelect1" />
+</view>
+
+<view class="shuming">读书笔记</view>
+<view class="ydcd">{{bj.notes}}</view>
+
+<view class="dibu">
+<button bindtap="goToPage1" style="height:80.6%; width: 35%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-bottom:1%;float: left;   margin-left: 4.3%;  font-weight: normal;" class="button1" disabled="{{smsFlag}}"    
+wx:if="{{bj.noteStatus!=2}}"	data-id="{{bj.noteStatus}}">删除</button>
+
+    <button bindtap="goToPage2" style="height:80.6%; width: 53.3%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B;float: right; margin-bottom:1%;  margin-right: 4.3%;  font-weight: normal;" class="button1" disabled="{{smsFlag}}"   
+		wx:if="{{bj.noteStatus!=2}}"	>编辑</button>
+		<button bindtap="goToPage1" style="height:80.6%; width: 92%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-bottom:1%;float: left;   margin-left: 4%;  font-weight: normal;" class="button1" disabled="{{smsFlag}}"    
+		wx:if="{{bj.noteStatus==2}}" data-id="{{bj.noteStatus}}" >删除</button>
+</view>

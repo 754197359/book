@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-field": "../../dist/field/index",
+    "van-action-sheet": "../../dist/action-sheet/index",
+    "calendar": "../components/calendar/calendar"
+  }
+}

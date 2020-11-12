@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "下一步",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-field": "../../dist/field/index"
+  }
+}

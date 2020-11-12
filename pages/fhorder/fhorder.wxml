@@ -1,0 +1,66 @@
+
+<van-tabs active="{{ active }}" bind:change="onChange" color="#EF783A" >
+	<van-tab title="全部">
+		<!-- <view   wx:for="{{yuyue}}" wx:key="index" >
+		<view class="oneappointment" bindtap="gotofhxq1" id="{{item.id}}">
+			<image src="../../images/yiyuyue.png" class="yiyuyue11" wx:if="{{item.reserveStatus==0}}"></image>
+			<image src="../../images/yihexiao.png" class="yiyuyue11" wx:if="{{item.reserveStatus==3}}" ></image>
+			<image src="../../images/yiquxiao.png" class="yiyuyue11" wx:if="{{item.reserveStatus==4}}" ></image>
+			<view class="title">{{item.reserveCode}}</view>
+			<view class="data">预约日期：{{item.reserveDate}}</view>
+			<view class="yiyuyue" wx:if="{{item.reserveStatus==0}}">已预约</view>
+			<view class="yiyuyue2" wx:if="{{item.reserveStatus==3}}">已核销</view>
+			<view class="yiyuyue1" wx:if="{{item.reserveStatus==4}}">已取消</view>
+		</view>
+		<view class="divLine"></view> -->
+		<view   wx:for="{{yuyue}}" wx:key="index" >
+		<view class="oneappointment" bindtap="gotofhxq1" id="{{item.id}}">
+			<image src="../../images/yiyuyue.png" class="yiyuyue11" wx:if="{{item.reserveStatus==0}}"></image>
+			<image src="../../images/yihexiao.png" class="yiyuyue11" wx:if="{{item.reserveStatus==3}}" ></image>
+			<image src="../../images/yiquxiao.png" class="yiyuyue11" wx:if="{{item.reserveStatus==4}}" ></image>
+			<view class="border1"> 
+			<view class="title">{{item.reserveCode}}</view>
+			<view class="yiyuyue" wx:if="{{item.reserveStatus==0}}">已预约</view>
+			<view class="yiyuyue3" wx:if="{{item.reserveStatus==3}}">已核销</view>
+			<view class="yiyuyue4" wx:if="{{item.reserveStatus==4}}">已取消</view>
+			</view>
+			<view class="data">预约日期：{{item.reserveDate}}</view>
+		</view>
+		<view class="divLine"></view>
+	</view>
+	</van-tab>
+	<van-tab title="已预约">
+		<view   wx:for="{{yuyue}}" wx:key="index" >
+		<view class="oneappointment" bindtap="gotofhxq1" id="{{item.id}}">
+			<image src="../../images/yiyuyue.png" class="yiyuyue11" wx:if="{{item.reserveStatus==0}}"></image>
+			<image src="../../images/yihexiao.png" class="yiyuyue11" wx:if="{{item.reserveStatus==3}}" ></image>
+			<image src="../../images/yiquxiao.png" class="yiyuyue11" wx:if="{{item.reserveStatus==4}}" ></image>
+			<view class="border1"> 
+			<view class="title">{{item.reserveCode}}</view>
+			<view class="yiyuyue" wx:if="{{item.reserveStatus==0}}">已预约</view>
+			<view class="yiyuyue3" wx:if="{{item.reserveStatus==3}}">已核销</view>
+			<view class="yiyuyue4" wx:if="{{item.reserveStatus==4}}">已取消</view>
+			</view>
+			<view class="data">预约日期：{{item.reserveDate}}</view>
+		</view>
+		<view class="divLine"></view>
+	</view>
+	</van-tab>
+	<van-tab title="已结束">
+		<view   wx:for="{{yuyue}}" wx:key="index" >
+		<view class="oneappointment" bindtap="gotofhxq1" id="{{item.id}}">
+			<image src="../../images/yiyuyue.png" class="yiyuyue11" wx:if="{{item.reserveStatus==0}}"></image>
+			<image src="../../images/yihexiao.png" class="yiyuyue11" wx:if="{{item.reserveStatus==3}}" ></image>
+			<image src="../../images/yiquxiao.png" class="yiyuyue11" wx:if="{{item.reserveStatus==4}}" ></image>
+			<view class="border1"> 
+			<view class="title">{{item.reserveCode}}</view>
+			<view class="yiyuyue" wx:if="{{item.reserveStatus==0}}">已预约</view>
+			<view class="yiyuyue3" wx:if="{{item.reserveStatus==3}}">已核销</view>
+			<view class="yiyuyue4" wx:if="{{item.reserveStatus==4}}">已取消</view>
+			</view>
+			<view class="data">预约日期：{{item.reserveDate}}</view>
+		</view>
+		<view class="divLine"></view>
+	</view>
+	</van-tab>
+</van-tabs>

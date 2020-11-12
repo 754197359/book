@@ -1,0 +1,67 @@
+<!--返回按钮-->
+<view class="back-container" style="opacity:{{opacity}}"></view>
+<view class="page-title">
+  实名认证
+</view>
+<image bindtap='onBackTap' class='back' src='../../images/icon_left_arrow.png'></image>
+
+
+<image src="../../images/shimingrz.png" class="smrz"></image>
+<!-- <view class="smrz1">实名认证</view> -->
+<view class="autonymone">
+  <view class="autonymone1">
+    <view class="autonyname">真实姓名</view>
+    <view class="autonycard" wx:if="{{arr.isRealname ==2 ||arr.isRealname ==1}}">{{name}}</view>
+    <input value="{{name}}" placeholder="请输入真实姓名" maxlength="10" bindinput="setPassInput" class="autonycard" wx:if="{{arr.isRealname==3 ||arr.isRealname==0}}"></input>
+  </view>
+  <view class="divLine"></view>
+  <view class="he">
+  <view class="autonyname1">身份证号</view>
+  <view class="autonycard1" wx:if="{{arr.isRealname ==2 ||arr.isRealname ==1}}">{{idcard}}</view>
+  <input value="{{idcard}}"  placeholder="请输入身份证号" maxlength="18" bindinput="setPassInput1" class="autonycard1" wx:if="{{arr.isRealname==3 ||arr.isRealname==0}}"></input>
+  </view>
+</view>
+
+<view class="uploading">上传身份证件照</view>
+<!-- <view class='pic' wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+			<image class='weui-uploader__img ' src="{{item}}" data-index="{{index}}"  bindtap="previewImg">
+				<icon type='cancel' class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></icon>
+			</image>
+     </view> -->
+<!-- <image  src="{{imgs}}" bindtap="previewImg">
+     	<icon type='cancel' class="delete-btn"  catchtap="deleteImg"></icon>
+       </image> -->
+<view class="zjzm" hidden="{{show1}}">
+  <image src="../../images/xiangji.png" class="xjicon" hidden="{{show1}}" bindtap="chooseImageTap"></image>
+  <view class="zjzmwz" hidden="{{show1}}" bindtap="chooseImageTap">证件正面</view>
+</view>
+  <image src="{{head}}" class="zjzm11" bindtap="previewImg" hidden="{{show4}}" >
+ <icon class="delete-btn" type="cancel" size="23" catchtap="deleteImg" hidden="{{show4}}" wx:if="{{arr.isRealname==3 ||arr.isRealname==0}}"></icon>
+ <view  class="tishi">证件正面</view>
+  </image>
+<view class="zjzm1">
+  <image src="../../images/xiangji.png" class="xjicon" hidden="{{show2}}" bindtap="chooseImageTap1"></image>
+  <view class="zjzmwz" bindtap='chooseImageTap1' hidden="{{show2}}">证件反面</view>
+</view>
+  <image src="{{head1}}" class="zjzm12" bindtap="previewImg1" hidden="{{show5}}" >
+ <icon class="delete-btn" type="cancel" size="23" catchtap="deleteImg1" wx:if="{{arr.isRealname==3 ||arr.isRealname==0}}"></icon>
+ <view  class="tishi">证件反面</view>
+  </image>
+<!-- <view class="uploading1">上传手持身份证件照</view>
+
+<view class="zjzm">
+  <image src="../../images/xiangji.png" class="xjicon" hidden="{{show3}}" bindtap="chooseImageTap2"></image>
+  <view class="zjzmwz" hidden="{{show3}}" bindtap="chooseImageTap2">手持证件正面照</view>
+</view>
+  <image src="{{head2}}" class="zjzm13" bindtap="previewImg2" hidden="{{show6}}" >
+ <icon class="delete-btn" type="cancel" size="23" catchtap="deleteImg2" wx:if="{{arr.isRealname==3 ||arr.isRealname==0}}"></icon>
+ <view  class="tishi1">手持证件正面照</view>
+  </image> -->
+
+<button bindtap="goToPage2"
+  style="height:6.6%; width: 91.4%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:50%; margin-bottom: 5%;"
+  class="button1" disabled="{{smsFlag}}" wx:if="{{arr.isRealname==3 ||arr.isRealname==0}}">下一步</button>
+
+  <button bindtap="goToPage3"
+  style="height:6.6%; width: 91.4%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:50%;   margin-bottom: 5%; "
+  class="button1" disabled="{{smsFlag}}" wx:if="{{arr.isRealname ==2 ||arr.isRealname ==1}}">查看审核结果</button>

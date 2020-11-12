@@ -1,0 +1,26 @@
+<view class="hha">
+  <view class="shuming">书名</view>
+  <van-field value="{{ bookName }}" placeholder="请输入书名" border="{{ true }}" maxlength="20" bind:change="onChange"
+    clearable />
+  <view class="shuming">阅读程度</view>
+  <view class="ydcd">{{ydcd}}</view>
+  <image src="../../images/jiantou.png" class="icon" bindtap="getshow1"></image>
+  <van-action-sheet show="{{ show1 }}" actions="{{ actions }}" bind:close="onClose1" bind:select="onSelect1" />
+  <view class="divLine"></view>
+  <view class="shuming">读书笔记</view>
+  <!-- <van-field value="{{ notes }}" placeholder="请输入读书笔记"  maxlength="500" bind:change="onChange1" clearable class="" /> -->
+  <van-cell-group>
+		<van-field value="{{ notes }}"  type="textarea" placeholder="请输入读书笔记" autosize border="{{ true }}" maxlength="500" bind:change="onChange1" />
+	</van-cell-group>
+</view>
+
+<view class="dibu">
+  <view class="divLine1"></view>
+  <button bindtap="goToPage1"
+    style="height:40px; width: 35%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-bottom:1%;float: left;   margin-left: 4.3%;  font-weight: normal;"
+    class="button1" disabled="{{smsFlag}}">存草稿</button>
+
+  <button bindtap="goToPage2"
+    style="height:40px; width: 53.3%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B;float: right; margin-bottom:1%;  margin-right: 4.3%;  font-weight: normal;"
+    class="button1" disabled="{{smsFlag}}">发布</button>
+</view>

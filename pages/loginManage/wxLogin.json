@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-field": "../../dist/field/index",
+    "van-divider": "../../dist/divider/index",
+    "mp-dialog": "../components/dialog/dialog"
+  },
+
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "授权登录"
+
+}

@@ -1,0 +1,84 @@
+<!-- <view class="ns">界首读书会</view> -->
+<view class="head">
+	<van-search value="{{ value }}" shape="round" placeholder="搜索" class="search" bind:focus="showHistory" />
+	<van-icon name="chat-o" info="{{notReadNum}}" size="25px" class="icono" bindtap="gotomessage" wx:if="{{notReadNum !=0}}"/>
+	<van-icon name="chat-o"  size="25px" class="icono" bindtap="gotomessage" wx:if="{{notReadNum ==0}}"/>
+</view>
+<!-- 轮播图 -->
+<view class="carousel">
+	<!--顶部轮播图  -->
+	<swiper indicator-dots="true" autoplay="true" interval='5000' indicator-active-color="#EF783A" circular="true" class="carousel1" >
+		<swiper-item wx:for="{{image}}" wx:key="index">
+			<!-- <navigator url="/pages/webview/webview?link={{item.link}}" wx:if="{{item.isLink==0}}"> -->
+			<image class='top-img' bindtap="goto" src='{{item.image}}' data-link="{{item.link}}" data-isLink="{{item.isLink}}" data-id="{{item.id}}"></image>
+			<!-- <view>{{item.link}}</view> -->
+			<!-- </navigator> -->
+		</swiper-item>
+		<!-- <swiper-item>
+			<image class='top-img' src='{{image}}'></image>
+		</swiper-item> -->
+		<!-- <swiper-item>
+			<image class='top-img' src='/images/ccc.jpg'></image>
+		</swiper-item> -->
+	</swiper>
+</view>
+<view class="tabone">
+	<view class='topTabSwiper'>
+		<view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>
+			<image src="../../images/xinwen.png" class="swiper3" hidden="{{show1}}" data-current="0" bindtap='checkCurrent'></image>
+			<image src="../../images/xinwen1.png" class="swiper3" hidden="{{show2}}" data-current="0" bindtap='checkCurrent'></image>
+			<view class="tabtatle1" bindtap='checkCurrent' data-current="0"> 新闻</view>
+		</view>
+		<view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>
+			<image src="../../images/tushu.png" class="swiper1" hidden="{{show3}}" data-current="1" bindtap='checkCurrent'></image>
+			<image src="../../images/tushu1.png" class="swiper1"hidden="{{show4}}" data-current="1" bindtap='checkCurrent'></image>
+			<view class="tabtatle1" data-current="1" bindtap='checkCurrent'>图书</view>
+		</view>
+		<view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>
+			<image src="../../images/dushufenxiang1.png" class="swiper2" hidden="{{show5}}" data-current="2" bindtap='checkCurrent'></image>
+			<image src="../../images/dushufenxiang.png" class="swiper2" hidden="{{show6}}" data-current="2" bindtap='checkCurrent'></image>
+			<view class="tabtatle2" data-current="2" bindtap='checkCurrent'>读书分享</view>
+		</view>
+	</view>
+	<view current="{{currentData}}" class='swiper'  duration="300" bindchange="bindchange">
+		<view wx:if="{{currentData==0}}">
+			<view wx:for="{{news}}" wx:key="index" class="news">
+				<navigator url="/pages/xinwenxq/xinwenxq?id={{item.id}}">
+				<image src='{{item.firstImg}}' class="tabico"></image>
+				<view class="tabtitle">{{item.mainTitle}}</view>
+				<view class="tabcontent">{{item.addUserStr}} I {{item.addTime}} </view>
+				</navigator>
+			</view>
+		</view>
+		<view view wx:if="{{currentData==1}}">
+			<van-tabs active="{{ active }}" bind:change="onChange" color="{{active1}}"  >
+				<van-tab wx:for="{{title}}" title="{{item}}">
+					<view wx:for="{{book}}" wx:key="index" class="tushu5">
+						<navigator url="/pages/tushuxq/tushuxq?id={{item.id}}">
+						<image src='{{item.coverImg}}' class="tab1ico"></image>
+						<view class="tab1title">{{item.name}}</view>
+						<view class="tab1content"><rich-text nodes="{{item.bookSummary}}" class="lianghang"></rich-text></view>
+						<view class="tab1chuban">{{item.publishHouse}}</view>
+						<view class="tab1auther">作者：{{item.author}}</view>
+						</navigator>
+					</view>
+				</van-tab>
+			</van-tabs>
+		</view>
+		<view view wx:if="{{currentData==2}}">
+			<view class="tab3zong" wx:for="{{news1}}" wx:key="index" >
+				<navigator url="/pages/dushuxq/dushuxq?id={{item.id}}">
+				
+				<view class="tab3title">《{{item.bookName}}》</view>
+				<view class="yihang">
+				<van-image round width="44rpx" height="44rpx" src="{{item.icon}}" class="tab3icon" />
+				<view class="tab3user">{{item.vipName}}</view>
+				<view class="tab3time"> I {{item.addTime}}</view>
+				</view>
+				<view class="tab3content">{{item.notes}}</view>
+				</navigator>
+			</view>
+		</view>
+	</view>
+				<image src="../../images/tianjia.png" class="tianjia" wx:if="{{currentData==2}}" bindtap="tianjia"></image>
+</view>

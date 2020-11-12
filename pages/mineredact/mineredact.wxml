@@ -1,0 +1,12 @@
+
+<image src="{{head}}" class="user-image"></image>
+<view class="redactone"  bindtap='headimage'>
+	<view class="redacttx">修改头像</view>
+	<image src="../../images/jiantou.png" class="redacticon"></image>
+</view>
+<view class="redactdivider">
+	<view class="redactname">昵称</view>
+	<van-field value="{{ name }}" clearable placeholder="请输入昵称" maxlength="10" class="inredactname" border="{{ true }}" bind:change="onChange"/>
+  <!-- <van-divider class="redactdivider"/> -->
+	<button bindtap="goToPage2" style="height:6.6%; width: 82.9%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:30px" class="button1" disabled="{{smsFlag}}" >保存</button>
+</view>

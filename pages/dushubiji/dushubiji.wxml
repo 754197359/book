@@ -1,0 +1,118 @@
+<!-- <view class="ns">读书笔记</view> -->
+    <import src="/pages/template/loading/loading.wxml" />
+    <view hidden="{{loading}}">
+    
+<image src="../../images/wushuju.png" class="wushuju" hidden="{{show1}}"></image>
+<view class="fashuju" hidden="{{show1}}">您的笔记空空如也，快去发布吧！</view>
+
+
+<button bindtap="goToPage2" style="height:6.6%; width: 91.4%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:4%" class="button1" disabled="{{smsFlag}}" hidden="{{show1}}">发布</button>
+
+<button bindtap="goToPage1" style="height:6.6%; width: 91.4%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B; margin-top:4%" class="button1" disabled="{{smsFlag}}" hidden="{{show1}}">草稿箱</button>
+<view hidden="{{show}}" class="kongbai1">
+	<van-tabs active="{{ active }}" bind:change="onChange" color="#EF783A">
+		<van-tab title="全部">
+			<view class="kongbai">
+				<view wx:for="{{bj}}" wx:key="index">
+					<view class="oneappointment">
+						<navigator url="/pages/dushubijixq/dushubijixq?id={{item.id}}">
+							<view class="icongao">
+								<image src="../../images/dushubiji2.png" class="yiyuyue11"></image>
+							</view>
+							<view class="title">{{item.bookName==null?"":item.bookName}}</view>
+							<view class="data">提交日期：{{item.lastUpdateTime==null?"":item.lastUpdateTime}}</view>
+							<view class="data1">审核意见：{{item.rejectIdea==null?"":item.rejectIdea}}</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #F7B600 ,#FCDA00);" wx:if="{{item.noteStatus==1}}">待审核</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #FF6976  ,#FFA0AC);" wx:if="{{item.noteStatus==3}}">未通过</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #06C46F ,#0EE4A8);" wx:if="{{item.noteStatus==2}}">已发布</view>
+						</navigator>
+						<view class="shanchu" data-id="{{item.id}}" data-id1="-1" bindtap="delete">删除</view>
+
+						<view class="bianji" bindtap="gotobj" data-id="{{item.id}}" wx:if="{{item.noteStatus!=2}}">编辑</view>
+						<view class="divLine"></view>
+					</view>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="待审核">
+			<view class="kongbai">
+				<view wx:for="{{bj}}" wx:key="index">
+					<view class="oneappointment">
+						<navigator url="/pages/dushubijixq/dushubijixq?id={{item.id}}">
+							<view class="icongao">
+								<image src="../../images/dushubiji2.png" class="yiyuyue11"></image>
+							</view>
+							<view class="title">{{item.bookName==null?"":item.bookName}}</view>
+							<view class="data">提交日期：{{item.lastUpdateTime==null?"":item.lastUpdateTime}}</view>
+							<view class="data1">审核意见：{{item.rejectIdea==null?"":item.rejectIdea}}</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #F7B600 ,#FCDA00);" wx:if="{{item.noteStatus==1}}">待审核</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #FF6976  ,#FFA0AC);" wx:if="{{item.noteStatus==3}}">未通过</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #06C46F ,#0EE4A8);" wx:if="{{item.noteStatus==2}}">已发布</view>
+						</navigator>
+						<view class="shanchu" data-id="{{item.id}}" data-id1="-1" bindtap="delete">删除</view>
+						<view class="bianji" bindtap="gotobj" data-id="{{item.id}}" wx:if="{{item.noteStatus!=2}}">编辑</view>
+					</view>
+					<view class="divLine"></view>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="未通过">
+			<view class="kongbai">
+				<view wx:for="{{bj}}" wx:key="index">
+					<view class="oneappointment">
+						<navigator url="/pages/dushubijixq/dushubijixq?id={{item.id}}">
+							<view class="icongao">
+								<image src="../../images/dushubiji2.png" class="yiyuyue11"></image>
+							</view>
+							<view class="title">{{item.bookName==null?"":item.bookName}}</view>
+							<view class="data">提交日期：{{item.lastUpdateTime==null?"":item.lastUpdateTime}}</view>
+							<view class="data1">审核意见：{{item.rejectIdea==null?"":item.rejectIdea}}</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #F7B600 ,#FCDA00);" wx:if="{{item.noteStatus==1}}">待审核</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #FF6976  ,#FFA0AC);" wx:if="{{item.noteStatus==3}}">未通过</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #06C46F ,#0EE4A8);" wx:if="{{item.noteStatus==2}}">已发布</view>
+						</navigator>
+						<view class="shanchu" data-id="{{item.id}}" data-id1="-1" bindtap="delete">删除</view>
+						<view class="bianji" bindtap="gotobj" data-id="{{item.id}}" wx:if="{{item.noteStatus!=2}}">编辑</view>
+					</view>
+					<view class="divLine"></view>
+				</view>
+			</view>
+		</van-tab>
+		<van-tab title="已发布">
+			<view class="kongbai">
+				<view wx:for="{{bj}}" wx:key="index">
+					<view class="oneappointment">
+						<navigator url="/pages/dushubijixq/dushubijixq?id={{item.id}}">
+							<view class="icongao">
+								<image src="../../images/dushubiji2.png" class="yiyuyue11"></image>
+							</view>
+							<view class="title">{{item.bookName==null?"":item.bookName}}</view>
+							<view class="data">提交日期：{{item.lastUpdateTime==null?"":item.lastUpdateTime}}</view>
+							<view class="data1">审核意见：{{item.rejectIdea==null?"":item.rejectIdea}}</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #F7B600 ,#FCDA00);" wx:if="{{item.noteStatus==1}}">待审核</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #FF6976  ,#FFA0AC);" wx:if="{{item.noteStatus==3}}">未通过</view>
+							<view class="yiyuyue" style="background: linear-gradient(to right, #06C46F ,#0EE4A8);" wx:if="{{item.noteStatus==2}}">已发布</view>
+						</navigator>
+						<view class="shanchu" data-id="{{item.id}}" data-id1="-1" bindtap="delete">删除</view>
+						<view class="bianji" bindtap="gotobj" data-id="{{item.id}}" wx:if="{{item.noteStatus!=2}}">编辑</view>
+					</view>
+					<view class="divLine"></view>
+				</view>
+			</view>
+		</van-tab>
+	</van-tabs>
+</view>
+<view class="dibu">
+	<view class="divLine1" hidden="{{show}}"></view>
+	<button bindtap="goToPage1" style="height:40px; width: 35%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; float: left;   margin-left: 4.3%;  font-weight: normal;" class="button1" disabled="{{smsFlag}}" hidden="{{show}}">草稿箱</button>
+
+	<button bindtap="goToPage2" style="height:40px; width: 53.3%;color: #EF783A; background: #FFF3ED; border-radius: 30px; border:1px solid #EF7B3B;float: right;  margin-right: 4.3%;  font-weight: normal;" class="button1" disabled="{{smsFlag}}" hidden="{{show}}">发布</button>
+</view>
+
+
+
+
+   </view>
+     <view hidden="{{!loading}}" style="height: 100%">
+      <template is="loading" />
+    </view>

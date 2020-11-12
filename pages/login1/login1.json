@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh":false,
+  "usingComponents": {
+    "van-field": "../../dist/field/index",
+    "van-divider": "../../dist/divider/index"
+  }
+}

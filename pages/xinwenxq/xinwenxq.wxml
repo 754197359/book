@@ -1,0 +1,12 @@
+
+<view class="xwtitle">{{other.mainTitle==null?"":other.mainTitle}}</view>
+<view class="xwsecond">
+<view class="xwauther">{{other.addUserStr==null?"":other.addUserStr}}  I  </view>
+<view class="xwtime">{{other.addTime==null?"":other.addTime}}</view>
+</view>
+<image src="{{other.firstImg}}" class='top-img'></image>
+	<!-- <rich-text nodes="{{other.content}}"></rich-text> -->
+	<!-- <view class="content">{{other.content==null?"":other.content}}</view> -->
+	<view class="content1">
+	<rich-text class="content"  nodes="{{other.content==null?'':other.content}}"></rich-text>
+	</view>

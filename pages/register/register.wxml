@@ -1,0 +1,13 @@
+
+<view>
+	<van-cell-group>
+		<van-field value="{{ username }}" required clearable label="设置密码"  placeholder="请输入6-16位字母、数字组合" password="true1" input-align="right" bind:change="onChange" />
+    		<van-field value="{{ username }}" required clearable label="确认密码"  placeholder="请再次输入密码" password="true1" input-align="right" bind:change="onChange1" />
+        		<van-field value="{{ username }}" required clearable label="姓名"  placeholder="请输入姓名" input-align="right" bind:change="onChange2" />
+            		<van-field value="{{ username }}" required clearable label="身份证号"  placeholder="请输入身份证号"  input-align="right" bind:change="onChange3" />
+  </van-cell-group>
+</view>
+<view>
+        	<button bindtap="goToPage2" style="height:6.6%; width: 82.9%;color: #FFFFFF; background: linear-gradient(to right,#EF7B3B ,#F1963F) ; border-radius: 30px; border:1px solid #EF7B3B; margin-top:10%" class="button1"
+        disabled= "{{smsFlag}}">确定</button>
+</view>

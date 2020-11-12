@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "登录",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "van-button": "../../dist/button/index"
+  }
+}

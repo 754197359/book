@@ -1,0 +1,72 @@
+<view class="sn">我的</view>
+<view class="location">
+	<image src="{{icon}}" class="user-image"></image>
+	<view class="display" style="margin-left: 20rpx; width: 68%;">
+		<text class="minephone">{{name}}</text>
+		<image src="../../images/huiyuan.png" class="huiyuanicon" hidden="{{show}}"></image>
+		<view class="minebj" bindtap="gotoredact">编辑</view>
+		<view>
+			<view class="tslabel" wx:if="{{arr.isRealname==2}}">已实名</view>
+      <view class="tslabel1" wx:if="{{arr.isRealname==3}}">未通过</view>
+			<view class="tslabel2" wx:if="{{arr.isRealname==1}}" >待审核</view>
+      	<view class="tslabel1" wx:if="{{arr.isRealname==0}}">未认证</view>
+		</view>
+	</view>
+	<view class="minejf">积分：</view>
+  <view class="minenum">{{arr.score==null ?"0":arr.score}}</view>
+	<!-- <view class="minenum">20</view> -->
+	<view class="minefen">分</view>
+</view>
+<view class="mineone1">
+	<image src="../../images/gerenyuyue.png" class="mineicon"></image>
+	<view class="minetwo">个人预约</view>
+		<view class="bd">
+	<image src="../../images/jiantou.png" class="mineicon1" bindtap="gotoappointment"></image>
+</view>
+	<van-divider class="minedivider" />
+</view>
+<view class="mineone" hidden="{{show}}">
+	<image src="../../images/yuyuejilu.png" class="mineicon"></image>
+	<view class="minetwo">分会预约</view>
+	<view class="bd">
+	<image src="../../images/jiantou.png" class="mineicon1" bindtap="gotoappointment1"></image>
+	</view>
+	<van-divider class="minedivider" />
+</view>
+<view class="mineone">
+	<image src="../../images/shimingrenzheng.png" class="mineicon" ></image>
+	
+	<view class="minetwo">实名认证</view>
+		<view class="bd1">
+	<image src="../../images/jiantou.png" class="mineicon1" bindtap="gotoappointment2"></image>
+	</view>
+	<view class="minetwo0" wx:if="{{arr.isRealname==2}}">已实名</view>
+	<view class="minetwo1" wx:if="{{arr.isRealname==3}}">未通过</view>
+  <view class="minetwo0" wx:if="{{arr.isRealname==0}}" >去实名认证</view>
+	<view class="minetwo2" wx:if="{{arr.isRealname==1}}">待审核</view>
+	<van-divider class="minedivider" />
+</view>
+<view class="mineone">
+	<image src="../../images/dushubiji.png" class="mineicon"></image>
+	<view class="minetwo">读书笔记</view>
+		<view class="bd">
+	<image src="../../images/jiantou.png" class="mineicon1" bindtap="gotoappointment3"></image>
+	</view>
+	<van-divider class="minedivider" />
+</view>
+<view class="mineone">
+	<image src="../../images/jifendaka.png" class="mineicon" ></image>
+	<view class="minetwo">积分打卡</view>
+		<view class="bd">
+	<image src="../../images/jiantou.png" class="mineicon1" bindtap="gotoappointment4"></image>
+	</view>
+	<van-divider class="minedivider" />
+</view>
+<!-- <view class="mineone">
+	<image src="../../images/dingyue2.png" class="mineicon"></image>
+	<view class="minetwo">退出登录</view>
+	<image src="../../images/jiantou.png" class="mineicon1" bindtap="gotoappointment5"></image>
+	<van-divider class="minedivider" />
+</view> -->
+
+<van-button custom-style="width: 90%; border-radius: 10rpx; margin-top: 10px;  margin-bottom: 10px;" color="#EF7C3B" bindtap="gotoappointment5" block>退出登录</van-button>

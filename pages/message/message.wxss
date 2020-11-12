@@ -1,0 +1,39 @@
+
+.body_back{
+  background: #f7f7f7;
+  height: 100vh;
+}
+.weui_cells{
+  font-size: 28rpx;
+  padding: 20rpx 40rpx;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+
+.weui_cell{
+  font-size: 24rpx;
+  padding: 0rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: block;
+}
+
+.weui_cell_hd{
+  float: left;
+  width: 27rpx;
+  font-size: 56rpx;
+  color: #dbdbdb;
+  margin-top: -20rpx;
+
+}
+.weui_cell_bd{
+  float: left;
+}
+
+.weui_cell_ft{
+  float: right;
+  font-size: 12rpx;
+  transform: scale(0.6);
+  margin-right: -10px;
+
+}

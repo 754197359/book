@@ -1,0 +1,38 @@
+
+
+<view class="content">
+
+		<view wx:if="{{canIUse}}">
+				<view class="back">
+					<image src="../../images/wxlogin.png"></image>
+				</view>
+
+				<view class="mima" >
+					<view class="divLine1">申请获取以下权限</view>
+					<view class="divLine2">获得你的公开信息(昵称、头像等)</view>
+				</view>
+
+				<view class="btnbox">
+					<button class="btn" type='primary' open-type='getUserInfo' bindtap='bindGetUserInfo'>授权登录</button>
+				</view>
+
+
+
+				<view class="wx-popup" hidden="{{flag}}">
+					<view class='popup-container'>
+						<view class="wx-popup-title">{{title}}</view>
+						<view class="wx-popup-con">
+								<open-data type="groupName" open-gid="xxxxxx"></open-data>
+								<open-data type="userAvatarUrl"></open-data>
+								<open-data type="userGender" lang="zh_CN"></open-data>
+						</view>
+						<view class="wx-popup-btn">
+							<text class="btn-no" bindtap='hidePopup'>{{btn_no}}</text>
+							<text class="btn-ok" bindtap='_success'>{{btn_ok}}</text>
+						</view>
+					</view>
+				</view>			
+		</view>
+		
+		<view wx:else>请升级微信版本</view>
+</view>

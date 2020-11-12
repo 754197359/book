@@ -1,0 +1,19 @@
+<view wx:for="{{news}}" wx:key="index" hidden="{{show}}">
+	<view class="oneappointment">
+		<navigator url="/pages/dushubijixq/dushubijixq?id={{item.id}}">
+			<view class="icongao">
+				<image src="../../images/dushubiji2.png" class="yiyuyue11"></image>
+			</view>
+			<view class="title">{{item.bookName}}</view>
+			<view class="data">保存日期:{{item.lastUpdateTime==null ?"":item.lastUpdateTime}}</view>
+		</navigator>
+		<view class="shanchu" data-id="{{item.id}}" bindtap="delete">删除</view>
+		<view class="bianji" bindtap="gotobj" data-id="{{item.id}}" wx:if="{{item.noteStatus!=2}}">编辑</view>
+	</view>
+	<view class="divLine"></view>
+</view>
+
+
+
+<image src="../../images/wushuju.png" class="wushuju" hidden="{{show1}}"></image>
+<view class="fashuju" hidden="{{show1}}">您的笔记空空如也，快去发布吧！</view>

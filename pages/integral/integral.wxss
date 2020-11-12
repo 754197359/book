@@ -1,0 +1,97 @@
+
+
+.icon{
+  height: 20px;
+  width: 20px;
+  float: right;
+  margin-top: 3%;
+}
+.registerBox{
+  margin: 0 auto;
+  position: relative;
+  height: 300rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.registerback{
+  height: 300rpx;
+  width: 100%;
+  position: absolute;
+  top: -73rpx;
+  z-index: -1;
+}
+.registerBtn{
+  width:178rpx;
+  height:66rpx;
+  line-height: 66rpx;
+  border-radius:33rpx;
+  background-color:#FFBC00;
+  color:#fff;
+  font-size: 30rpx;
+  text-align: center;
+}
+.regiscontent{
+  width: 686rpx;
+  height: 206rpx;
+  background: #FFFFFF;
+  box-shadow: 0 0 4px 4px rgba(239,120,58,0.05);
+  border-radius: 8px;
+}
+
+.regiscontent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  top: -97rpx;
+}
+.totalinter{
+  font-size:24rpx;
+  color:#999;
+  position: relative;
+  margin-bottom: 20rpx;
+}
+.totalinter .num{
+  font-size:48rpx;
+  color:#EF783A;
+  position: absolute;
+  top: -20rpx;
+  left: 134rpx;
+}
+
+.interdetail{
+  width: 492rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  background:#FFF3ED;
+  border-radius: 28px;
+  color: #EF783A;
+  font-size: 24rpx;
+  text-align: center;
+}
+.titlecontent{
+  width: 686rpx;
+  margin: 0 auto;
+}
+.title{
+  font-size: 30rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.titlebox{
+  font-size: 24rpx;
+  color: #666;
+  line-height: 36rpx;
+}
+.calencontent{
+  width: 686rpx;
+  margin: 0 auto;
+  margin-top: -83rpx;
+}
+
+.calendar{
+  box-shadow: 0 0 4px 4px rgba(239,120,58,0.05);
+}

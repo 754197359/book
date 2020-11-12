@@ -1,0 +1,22 @@
+<view class="back-container" style="opacity:{{opacity}}"></view>
+<view class="page-title">
+  实名认证
+</view>
+<image bindtap='onBackTap' class='back' src='../../images/icon_left_arrow.png'></image>
+
+<image src="../../images/shimingrz.png" class="smrz"></image>
+<!-- <view class="smrz1">实名认证</view> -->
+
+<view class="renzhengk">
+	<van-image round width="60px" height="60px" src="{{icon}}" class="touxiang"/>
+	<view class="name">{{name}}</view>
+	<view class="idcard">{{idcard1}}****************{{idcard2}}</view>
+	<image src="../../images/anquanbaozhang.png" class="icon"></image>
+	<view class="yinsi">个人隐私信息安全保障中</view>
+	<view class="zt"  style="background: linear-gradient(to right, #FE6672,#FF98A5);" wx:if="{{arr.isRealname==3}}" >未通过</view>
+	<view class="zt"  style="background: linear-gradient(to right, #EF783A,#F8B06C);" wx:if="{{arr.isRealname==2}}" >已实名</view>
+	<view class="zt"  style="background: linear-gradient(to right, #F7B500,#FBD900);" wx:if="{{arr.isRealname==1}}" >待审核</view>
+</view>
+
+
+		<button bindtap="goToPage2" style="height:6.6%; width: 91.4%;color: #FFFFFF; background:linear-gradient(to right, #F07B3C,#F0933F); border-radius: 30px; border:1px solid #EF7B3B; margin-bottom:4%; margin-top:35%;margin-left:4.3%;   font-weight: normal;" class="button1" disabled="{{smsFlag}}" wx:if="{{isRealname==3}}">重新认证</button>
